@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Charts3D</title>
+    <script src="d3.min.js"></script>
+    <script src="../dist/charts-3d.min.js"></script>
+    <style>
+      #text {
+        position: relative;
+      }
+
+      #test {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+  <svg id='svg6'/>
+  <button onclick="test.changeDataTest()">更新test</button>
+  <div id="test"></div>
+  <div id="pie"></div>
+  <div id="p2"></div>
+  <!--    <p id="text">8888</p>-->
+  <!--    <button onclick="Charts3D.changeData()">更新</button>-->
+  <button onclick="c.changeData()">更新</button>
+    <script>
+      // new Charts3D.default("#pie");
+      var c = new Charts3D({
+        type: 'pie',
+        selector: '#p2',
+        data: [
+          { label: 'Basic', color: '#3366CC' },
+          { label: 'Plus', color: '#DC3912' },
+          { label: 'Lite', color: '#FF9900' },
+          { label: 'Elite', color: '#109618' },
+          { label: 'Delux', color: '#990099' }
+        ]
+      });
+      c.changeData()
+
+      var test = new Charts3D({type: 'test', selector: '#test'});
+    </script>
+  </body>
+</html>
