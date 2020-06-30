@@ -1,6 +1,6 @@
 {
   "name": "charts-3d",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "",
   "main": "dist/charts-3d.min.js",
   "module": "src/index.js",
