@@ -5,42 +5,75 @@
     <title>Charts3D</title>
     <script src="d3.min.js"></script>
     <script src="../dist/charts-3d.min.js"></script>
+    <!--    <script src="http://192.168.20.131:3001/npm/charts-3d.min.js"></script>-->
     <style>
-      #text {
-        position: relative;
-      }
-
-      #test {
+      #pie {
         width: 400px;
-        height: 400px;
+        height: 300px;
       }
     </style>
   </head>
   <body>
-  <svg id='svg6'/>
-  <button onclick="test.changeDataTest()">更新test</button>
-  <div id="test"></div>
-  <div id="pie"></div>
-  <div id="p2"></div>
-  <!--    <p id="text">8888</p>-->
-  <!--    <button onclick="Charts3D.changeData()">更新</button>-->
-  <button onclick="c.changeData()">更新</button>
+    <button onclick="update()">update</button>
+    <div id="pie"></div>
     <script>
-      // new Charts3D.default("#pie");
-      var c = new Charts3D({
-        type: 'pie',
-        selector: '#p2',
-        data: [
-          { label: 'Basic', color: '#3366CC' },
-          { label: 'Plus', color: '#DC3912' },
-          { label: 'Lite', color: '#FF9900' },
-          { label: 'Elite', color: '#109618' },
-          { label: 'Delux', color: '#990099' }
-        ]
-      });
-      c.changeData()
+      const data = [
+        {
+          id: 1,
+          title: '张三',
+          value: 12
+        },
+        {
+          id: 2,
+          title: '李四',
+          value: 12
+        },
+        {
+          id: 3,
+          title: '王五',
+          value: 28
+        },
+        {
+          id: 4,
+          title: '赵六',
+          value: 19
+        },
+        {
+          id: 5,
+          title: '王五',
+          value: 28
+        },
+        {
+          id: 6,
+          title: '赵六',
+          value: 19
+        }
+      ];
 
-      var test = new Charts3D({type: 'test', selector: '#test'});
+      const opt = {
+        select: '#pie',
+        title: {
+          text: '销售人员统计表',
+          fontSize: '18px',
+          color: 'blue',
+          top: 40
+        },
+        fontSize: '12px',
+        angle: 45,
+        deep: 15
+      };
+      // const pieChart = new Charts3D(opt);
+      const pieChart = Charts3D.init(opt);
+      setTimeout(() => {
+        pieChart.update(data);
+      }, 100)
+      function update() {
+        data.forEach(item => {
+          item.value = 1 + Math.round(Math.random() * (100 - 1));
+        });
+        const temp = data.filter(item => item.value > 20)
+        pieChart.update(temp);
+      }
     </script>
   </body>
 </html>
