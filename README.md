@@ -4,7 +4,7 @@
 
 ![image][1]
 
-[1]: ./example/pie3d.png
+[1]: /example/pie3d.png
 
 ##安装
 
