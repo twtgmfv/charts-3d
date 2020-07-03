@@ -1,4 +1,4 @@
-import d3 from 'd3';
+import * as d3 from 'd3';
 import Pie3d from './charts/pie3d';
 
 const options = {

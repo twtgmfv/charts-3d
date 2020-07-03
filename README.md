@@ -161,11 +161,11 @@ function update() {
 
 `Charts3d.init(this.opts)`
 
-- `this.opts` - Array, 初始化饼图的参数
+- `this.opts` - Object, 初始化饼图的参数
 
 ### 说明
 
-`opts` - Object
+`opts` 
 
 ```
 {
@@ -274,7 +274,7 @@ function update() {
 
 更新饼图数据
 
-`pie.update(data, opts)`
+`pie.update(data, [opts])`
 
 ## License
 

@@ -1,4 +1,4 @@
-import d3 from 'd3';
+import * as d3 from 'd3';
 import { getColor, midAngle } from '../../util';
 import { setPieOptions, pieInner, pieTop, pieOuter, labelPath, tweenLabelTransform, tweenLabelText, pieWalls } from './components';
 
@@ -9,8 +9,8 @@ class Pie3d {
         text: '',
         top: 0,
         left: 0,
-        fontSize: '14px',
-        color: 'red'
+        fontSize: '',
+        color: ''
       }, // 标题
       deep: 20, // （最小值：0）以px为单位的饼厚度
       angle: 45, // 最小值：0，最大值：90）图表的角度，以度为单位，当90成为正常的平面饼图
@@ -18,7 +18,8 @@ class Pie3d {
       size: 100, // 相对于用户元素的大小 %
       fontSize: '12px', // 字号(px)
       colors: {
-        pies: ['#d3fe14', '#c9080a', '#fec7f8', '#0b7b3e', '#0bf0e9', '#c203c8', '#fd9b39', '#888593'],
+        // pies: ['#d3fe14', '#c9080a', '#fec7f8', '#0b7b3e', '#0bf0e9', '#c203c8', '#fd9b39', '#888593'],
+        pies: [],
         label: ''
       },
       animationDuration: 700, // 动画时长
