@@ -5,6 +5,7 @@
 ![image][1]
 
 [1]: https://raw.githubusercontent.com/twtgmfv/charts-3d/master/example/pie3d.png
+![pie3d.png](/example)
 
 ##安装
 
