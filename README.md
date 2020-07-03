@@ -2,7 +2,9 @@
 
 本库基于 d3js 二次开发而成，主要解决市面上对 3d 图表欠缺问题。目前仅为 pie 图的支持，其它后续补充。
 
+![image][1]
 
+[1]: https://raw.githubusercontent.com/twtgmfv/charts-3d/master/example/pie3d.png
 
 ##安装
 
